@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fake News Classifier</title>
+</head>
+<body>
+    <h1>Fake News Classifier</h1>
+    <form method="post">
+        <textarea name="news" rows="5" cols="60" placeholder="Enter news article here..."></textarea><br>
+        <input type="submit" value="Classify">
+    </form>
+    {% if result %}
+        <h2>Prediction: {{ result }}</h2>
+        <h3>Probability: {{ probability }}</h3>
+    {% endif %}
+</body>
+</html>
